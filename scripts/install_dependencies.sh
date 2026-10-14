@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
-
-dnf install -y httpd
-mkdir -p /var/www/html
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
