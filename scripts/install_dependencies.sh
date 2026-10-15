@@ -1,6 +1,4 @@
 #!/bin/bash
-set -e
-
-dnf install -y httpd
-mkdir -p /var/www/html
-systemctl enable httpd
+sudo systemctl restart httpd
+sudo chmod -R 755 /var/www/html
+echo "Deployed at $(date)" | sudo tee /tmp/deploy.log
